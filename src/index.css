@@ -105,4 +105,45 @@ All colors MUST be HSL for proper theming.
   .transition-smooth {
     transition: var(--transition-smooth);
   }
+
+  .logo-font {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-1 shadow-xl;
+  }
+
+  .button-glow {
+    @apply transition-all duration-300;
+  }
+
+  .button-glow:hover {
+    @apply shadow-[0_0_20px_hsl(var(--primary)/0.5)];
+  }
+
+  .feature-card {
+    @apply bg-card/50 border border-border/50 rounded-xl p-4 transition-all duration-300 cursor-pointer backdrop-blur-sm;
+  }
+
+  .feature-card:hover {
+    @apply bg-card border-primary/30 shadow-[0_0_20px_hsl(var(--primary)/0.2)] scale-105;
+  }
+
+  .feature-card.selected {
+    @apply bg-primary/10 border-primary/50 shadow-[0_0_25px_hsl(var(--primary)/0.4)];
+  }
+
+  .hero-section {
+    @apply min-h-screen bg-gradient-to-br from-background via-background to-background/90;
+  }
+
+  .floating-orb {
+    @apply absolute rounded-full opacity-20 animate-float;
+    background: radial-gradient(circle, hsl(var(--primary) / 0.3), transparent);
+  }
 }

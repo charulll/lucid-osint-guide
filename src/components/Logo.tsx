@@ -29,7 +29,7 @@ export function Logo({ size = "md", showText = true, className = "" }: LogoProps
         />
       </div>
       {showText && (
-        <span className={`font-bold gradient-text ${textSizeClasses[size]}`}>
+        <span className={`font-bold gradient-text logo-font ${textSizeClasses[size]}`}>
           LUCID
         </span>
       )}
